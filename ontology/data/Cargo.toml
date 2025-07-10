@@ -1,0 +1,10 @@
+[package]
+name = "data_model"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+schemars = {version="0.8.22", features=["chrono","uuid1"]}
+uuid={version="1.16.0", features=["v4"]}
+serde_json = "1.0"
+
