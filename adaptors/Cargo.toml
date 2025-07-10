@@ -1,0 +1,35 @@
+[package]
+name = "adaptors"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "adaptors"
+path = "src/lib.rs"
+
+[[bin]]
+name = "comhairle_data"
+path = "src/main.rs"
+
+
+[dependencies]
+clap = { version = "4.5.32", features = ["derive"] }
+sea-query = "0.32.1"
+sea-query-binder = {version="0.7.0", features=[
+    "sqlx-postgres",
+    "with-chrono",
+    "with-json",
+    "with-rust_decimal",
+    "with-bigdecimal",
+    "with-uuid",
+    "with-time",
+    "with-ipnetwork",
+    "with-mac_address",
+    "runtime-async-std-native-tls"
+    ]}
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.138"
+sqlx = "0.8.3"
+sqlx-postgres = "0.8.3"
+thiserror = "2.0.11"
+tokio = {version = "1.43.0", features =['full']}
